@@ -1,6 +1,17 @@
-//migration create 
-sequelize migration:create --name add-area_id-in-users
-// model create 
-npx sequelize-cli model:generate --name Article --attributes name:string,desc:string,price:integer,active:boolean,postedAt:date
-// generate seed
-npx sequelize-cli seed:generate --name demo-user
+//Adex Ocean Vision Sever
+
+1). add dependencies
+   npm install
+
+2). database migration 
+  npx sequelize-cli db:migrate || npm run db:migrate
+
+3). database seed migration
+  npx sequelize-cli db:seed:all || npm run db:seed
+  
+4). server start
+  npm run start 
+
+Prerequisites:
+ 1) Node(^14)
+ 2) OS(Linux,Mac)
