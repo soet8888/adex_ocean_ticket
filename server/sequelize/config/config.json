@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "root",
+    "password": "p@w0rd",
+    "database": "idb",
+    "host": "localhost",
+    "dialect": "sqlite",
+    "storage": "./adex.sqlite"
+  },
+  "test": {
+    "username": "root",
+    "password": "p@w0rd",
+    "database": "idb",
+    "host": "localhost",
+    "dialect": "sqlite",
+    "storage": "./adex.sqlite"
+  },
+  "production": {
+    "username": "root",
+    "password": "p@w0rd",
+    "database": "idb",
+    "host": "localhost",
+    "dialect": "sqlite",
+    "storage": "./adex.sqlite"
+  }
+}
