@@ -2,4 +2,4 @@
 
 # Read documents  
 
-## (client/ReadMe.text,server/ReadMe.text)
+## (client/ReadMe.txt,server/ReadMe.txt)
