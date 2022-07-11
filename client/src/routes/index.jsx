@@ -5,6 +5,7 @@ import NotFound from '../pages/not_found';
 import HomePage from '../pages/home_page';
 import AddressPage from '../pages/address_page';
 import CheckoutPage from '../pages/checkout_page';
+import CustomerTicketPage from '../pages/customer_ticket_page';
 
 
 export default function AppRoute(props) {
@@ -13,6 +14,7 @@ export default function AppRoute(props) {
             <Route path={paths.home} element={<HomePage />} />
             <Route path={paths.checkout} element={<CheckoutPage />} />
             <Route path={paths.address} element={<AddressPage />} />
+            <Route path={paths.tickets} element={<CustomerTicketPage />} />
             <Route path="*" element={<NotFound />} />
         </Routes>
     )

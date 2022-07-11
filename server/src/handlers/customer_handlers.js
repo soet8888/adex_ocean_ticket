@@ -11,7 +11,7 @@ const getCustomerById = async (req, res) => {
     }
     const customer = await models["Customer"].findOne({
         where: { id },
-        include: [{ model: models["Order"] }],
+        include: [{ model: models["Order"], include: [{ model: models["Ticket"] }] }],
     });
     if (customer === null) {
         return res.send({ status: "error", code: "notFound-customer" });

@@ -1,4 +1,4 @@
-//Adex Ocean Vision Cleint
+//Adex Ocean Vision Client
 
 1). add dependencies
    yarn 
@@ -17,5 +17,5 @@ Prerequisites:
 
 Remark (
 After build to release ,
-automatically copy build static/dist folder to sever/public by usin unix commands(cp,rm)
+automatically copy build static/dist folder to server/public by using unix commands(cp,rm)
 )

@@ -19,6 +19,24 @@ export const getTickets = async () => {
     }
     return { success: false }
 }
+export const getCustomer = async (customerId) => {
+    try {
+        const url = base_url + `/customer/${customerId}`;
+        const headers = {
+            ["Content-Type"]: "application/json",
+            ["Authorization"]: `Bearer `
+        };
+        const method = "get";
+        const res = await axios(url, { method, headers });
+        if (res.data && res.data.data) {
+            return { success: true, data: res.data.data }
+        }
+    } catch (error) {
+        // console.log(error)
+        return { success: false };
+    }
+    return { success: false }
+}
 export const createCustomer = async (data) => {
     try {
         const url = base_url + `/customer`;
@@ -45,6 +63,24 @@ export const createOrder = async (data) => {
             ["Authorization"]: `Bearer `
         };
         const method = "post";
+        const res = await axios(url, { method, headers, data: JSON.stringify({ ...data }) });
+        if (res.data && res.data.data) {
+            return { success: true, data: res.data.data }
+        }
+    } catch (error) {
+        // console.log(error)
+        return { success: false };
+    }
+    return { success: false }
+}
+export const updateOrder = async (orderId, data) => {
+    try {
+        const url = base_url + `/order/${orderId}`;
+        const headers = {
+            ["Content-Type"]: "application/json",
+            ["Authorization"]: `Bearer `
+        };
+        const method = "put";
         const res = await axios(url, { method, headers, data: JSON.stringify({ ...data }) });
         if (res.data && res.data.data) {
             return { success: true, data: res.data.data }
